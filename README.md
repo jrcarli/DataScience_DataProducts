@@ -6,3 +6,6 @@ The interface will automatically update with correct values based on a standard 
 
 The live app is hosted here:
 [https://jrcarli.shinyapps.io/dataproducts](https://jrcarli.shinyapps.io/dataproducts)
+
+You can see the slidify presentation about the app on github.io here:
+[http://jrcarli.github.io/DataScience_DataProducts/coffeebrewing/](http://jrcarli.github.io/DataScience_DataProducts/coffeebrewing/)
