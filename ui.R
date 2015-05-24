@@ -17,9 +17,13 @@ shinyUI(fluidPage(
                         min = 1, 
                         max = 4),
             #htmlOutput("sliderInputUI")
-                                    
+            
             tags$div(
-                "Recipes and ratios from ",
+                "Use the tabs to select your favorite brew method.
+                Recipes will automatically adjust to your unit and serving size preferences."),
+            br(),
+            tags$div(
+                "Recipes and ratios come from ",
                 tags$a(href="http://tobysestate.com",target="_blank", "Toby's Estate"),
                 " Brew Instructions pocket guidebook.")            
         
