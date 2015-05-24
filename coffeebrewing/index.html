@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Coffee Brewing Methods</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Coffee Brewing Methods">
+  <meta name="author" content="">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="./assets/css/ribbons.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>Coffee Brewing Methods</h1>
+    <h2>Adjustable Recipes for Chemex, French Press, Moka Pot, and Aeropress</h2>
+    <p><br/></p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <hgroup>
+    <h2>Motivation</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Think about the last cup of coffee you enjoyed. Did it come from a fancy coffee shop with unusual brewing equipment? Now you can make a great cup, too!</p>
+
+<p>This app takes the mystique out of quality brewing. You select your prefered method and the number of cups you want to make, and it will adjust a specific recipe to meet your needs. </p>
+
+<p>Equipment to have on hand: brew vessel, coffee, water and kettle, and a scale with units in grams or ounces.</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-2" style="background:;">
+  <hgroup>
+    <h2>Coffee Brewing Basics</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>We cover four brewing methods: Chemex, French Press, Moka Pot, and Aeropress.</p>
+
+<p>First you need to decide which method is right for you. Chemex and French Press are better at scaling, though their flavor profiles are rather distinct. A Moka Pot is very simple, and an Aeropress produces a great double espresso (which you can turn into an Americano by topping off with hot water).
+Once you&#39;ve chosen your brew method, you&#39;ll need your favorite coffee beans ground to the proper fineness. Consider standard drip coffee as a familiar reference. This is a medium grind. The Chemex and French Press will work better with a slightly coarser grind; the Aeropress and Moka Pot will work better with a slightly finer grind.</p>
+
+<p>Now you just need to decide how much coffee you want to drink!</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-3" style="background:;">
+  <hgroup>
+    <h2>Scaling and Unit Conversions</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>The app starts with a basic ratio of coffee to water for each brew method. It scales these values based on the user&#39;s input, and will adjust the units between grams and ounces to meet the user&#39;s preference.</p>
+
+<p>Here we show calculated values for two-cup Chemex and French Press and one-cup Moka Pot and Aeropress.</p>
+
+<pre><code class="r">method &lt;- c(&quot;Chemex&quot;,&quot;French Press&quot;,&quot;Moka Pot&quot;,&quot;Aeropress&quot;)
+coffee_g &lt;- c(50,50,20,17); ratio &lt;- c(14,15,12,14); water_g &lt;- coffee * ratio
+coffee_oz &lt;- round(coffee * 0.035274); water_oz &lt;- round(water_g * 0.035274)
+data.frame(method,ratio,coffee_g,water_g,coffee_ounces,water_ounces)
+</code></pre>
+
+<pre><code>##         method ratio coffee_g water_g coffee_ounces water_ounces
+## 1       Chemex    14       50     700             2           25
+## 2 French Press    15       50     750             2           26
+## 3     Moka Pot    12       20     240             1            8
+## 4    Aeropress    14       17     238             1            8
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-4" style="background:;">
+  <hgroup>
+    <h2>Final Product</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Check out <a href="https://jrcarli.shinyapps.io/dataproducts/">Coffee Brewing Methods</a> on <a href="http://www.shinyapps.io">shinyapps.io</a>!</p>
+
+<p>The recipes and ratios used in this app came from the <a href="http://tobysestate.com">Toby&#39;s Estate</a> Brew Instructions pocket guidebook.</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='Motivation'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='Coffee Brewing Basics'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='Scaling and Unit Conversions'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='Final Product'>
+         4
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>
